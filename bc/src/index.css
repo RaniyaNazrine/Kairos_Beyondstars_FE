@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* animated gradient background used by auth page */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer utilities {
+  .bg-animated-gradient {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+  }
+}
